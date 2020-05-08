@@ -1,0 +1,57 @@
+from random import randint 
+from time import sleep
+
+lista = ("Pedra", "Papel", "Tesoura")
+
+computador = randint(0,2)
+
+perguntar = int(input('''Escolha uma opcao para se jogar:
+
+[0]Pedra
+[1]Papel
+[2]Tesoura
+
+Digite sua Escolha:'''))
+
+print("JO\n")
+sleep(1)
+print("KEM\n")
+sleep(1)
+print("PO\n")
+
+print("-="*20)
+print("O computador Escolheu: {}".format(lista[computador]))
+print("O jogador Escolheu: {}".format(lista[perguntar]))
+print("-="*20)
+
+if computador == 0:
+    if perguntar == 0:
+        print("Empate")
+    elif perguntar == 1:
+        print("Jogador Perdeu")
+    elif perguntar == 2:
+        print("Computador Venceu")
+    else:
+        print("Operacao invalida")
+
+if computador == 1:
+    if perguntar == 0:
+        print("Computador Perdeu")
+    elif perguntar == 1:
+        print("Empate")
+    elif perguntar == 2:
+        print("Jogador Venceu")
+    else:
+        print("Operacao invalida")
+
+if computador == 2:
+    if perguntar == 0:
+        print("Jogador Venceu")
+    elif perguntar == 1:
+        print("Computador Venceu")
+    elif perguntar == 2:
+        print("Empate")
+    else:
+        print("Operacao invalida")
+else:
+    print("Operacao invalida")
